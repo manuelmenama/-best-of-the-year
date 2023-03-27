@@ -1,11 +1,11 @@
-package org.lessons.best_of_the_year;
+package org.lessons.best_of_the_year.model;
 
-public class Movie {
+public class Song {
+
     private int id;
     private String title;
 
-
-    public Movie(int id, String title) {
+    public Song(int id, String title) {
         this.id = id;
         this.title = title;
     }
