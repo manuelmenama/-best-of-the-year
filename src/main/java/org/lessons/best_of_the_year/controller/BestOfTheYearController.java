@@ -57,15 +57,16 @@ public class BestOfTheYearController {
     @GetMapping("/movie/{id}")
     public String singleMovie(Model model, @PathVariable(value = "id", required = false) int id) {
         List<Movie> movies = getBestMovie();
-        String selectedMovie = "";
-        for (Movie movie:
-             movies) {
-            if (movie.getId() == id){
-                selectedMovie = movie.getTitle();
-            }
+        Optional<Movie> selectedMovie = movies.stream().filter(movie -> movie.getId() == id).findFirst();
+
+        if (selectedMovie.isEmpty()) {
+            return "redirect:/song";
+        } else {
+            model.addAttribute("selectedMovie", selectedMovie.get());;
         }
 
-        model.addAttribute("selectedMovie", selectedMovie);
+
+
 
         return "single_movie";
     }
