@@ -60,7 +60,7 @@ public class BestOfTheYearController {
         Optional<Movie> selectedMovie = movies.stream().filter(movie -> movie.getId() == id).findFirst();
 
         if (selectedMovie.isEmpty()) {
-            return "redirect:/song";
+            return "redirect:/movie";
         } else {
             model.addAttribute("selectedMovie", selectedMovie.get());;
         }
