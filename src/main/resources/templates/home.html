@@ -9,8 +9,20 @@
     <title>TheBest</title>
 </head>
 <body>
+
+
     <nav th:replace="~{/fragments/navbar :: navbar('home')}"></nav>
-    <h1>The best of the year by <span th:text="${name}"></span></h1>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+
+                <h1>The best of the year by <span th:text="${name}"></span></h1>
+
+            </div>
+        </div>
+    </div>
+
 
     <script th:replace="~{/fragments/script :: script}"></script>
 
