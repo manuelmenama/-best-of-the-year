@@ -6,9 +6,11 @@
 </head>
 <body>
 
-  <h1>Best movie!</h1>
+    <h1>Best movie!</h1>
+    <ul>
+        <li th:each="movie : ${movieList}"><a th:href="|/movies/${movie.id}|" th:text="${movie.title}"></a></li>
+    </ul>
 
-    <h2 th:text="${movieTitle}"></h2>
 
 </body>
 </html>
