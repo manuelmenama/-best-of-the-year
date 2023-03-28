@@ -2,11 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Bootstrap CSS -->
+    <link th:replace="~{/fragments/head :: style_resources}">
+
     <title>TheBest</title>
 </head>
 <body>
-
+    <nav th:replace="~{/fragments/navbar :: navbar}"></nav>
     <h1>The best of the year by <span th:text="${name}"></span></h1>
+
+    <script th:replace="~{/fragments/script :: script}"></script>
 
 </body>
 </html>

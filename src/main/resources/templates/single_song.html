@@ -2,12 +2,20 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Bootstrap CSS -->
+    <link th:replace="~{/fragments/head :: style_resources}">
+
     <title th:text="${selectedSong}" ></title>
 </head>
 <body>
 
+    <nav th:replace="~{/fragments/navbar :: navbar}"></nav>
+
     <h1>Selected song:</h1>
-    <h2 th:text="${selectedSong.getTitle()}"></h2>
+    <h2 th:text="|Titolo: ${selectedSong.getTitle()}, ID: ${selectedSong.getId()}|"></h2>
+
+    <script th:replace="~{/fragments/script :: script}"></script>
 
 </body>
 </html>

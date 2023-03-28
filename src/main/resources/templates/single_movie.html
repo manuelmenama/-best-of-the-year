@@ -2,12 +2,20 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Bootstrap CSS -->
+    <link th:replace="~{/fragments/head :: style_resources}">
+
     <title th:text="${selectedMovie}"></title>
 </head>
 <body>
 
-<h1>Hai selezionato: </h1>
-<h2 th:text="${selectedMovie.getTitle()}"></h2>
+    <nav th:replace="~{/fragments/navbar :: navbar}"></nav>
+
+    <h1>Hai selezionato: </h1>
+    <h2 th:text="|Titolo: ${selectedMovie.getTitle()}, ID: ${selectedMovie.getId}|"></h2>
+
+    <script th:replace="~{/fragments/script :: script}"></script>
 
 </body>
 </html>
