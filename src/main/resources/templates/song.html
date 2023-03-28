@@ -15,7 +15,7 @@
     <h1>Best song!</h1>
 
     <ul>
-        <li th:each="song : ${songList}"><a th:href="|songs/${song.id}|" th:text="${song.title}"></a></li>
+        <li th:each="song : ${songList}"><a th:href="|/songs/${song.id}|" th:text="${song.title}"></a></li>
     </ul>
 
     <script th:replace="~{/fragments/script :: script}"></script>

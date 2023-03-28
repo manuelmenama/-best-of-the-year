@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <nav th:replace="~{/fragments/navbar :: navbar}"></nav>
+    <nav th:replace="~{/fragments/navbar :: navbar('movies')}"></nav>
 
     <h1>Hai selezionato: </h1>
     <h2 th:text="|Titolo: ${selectedMovie.getTitle()}, ID: ${selectedMovie.getId}|"></h2>
